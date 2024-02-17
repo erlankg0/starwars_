@@ -24,13 +24,12 @@ interface Person {
 const instanceSWAPI = axios.create({
     baseURL: 'https://swapi.dev/api/'
 })
-const getApiPersonList = async (url: string): Promise<Person[]> => {
+const getApiPersonList = async (url: string): Promise<Person[] | boolean> => {
     try {
         const response = await instanceSWAPI.get(url)
         return response.data.results;
     } catch (error) {
-        console.error(error);
-        throw error
+        return false;
     }
 }
 

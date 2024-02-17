@@ -1,0 +1,14 @@
+.title{
+    font-family: "Bookman Old Style", sans-serif;
+    color: gold;
+    line-height: 1.7;
+    font-size: 26px;
+    text-align: center;
+    text-shadow: 0 0 2px var(--color-white);
+    --webkit-text-stroke-color: gold;
+    transition: all ease .3s;
+}
+
+.title:hover{
+    transform: scale(1.1);
+}
