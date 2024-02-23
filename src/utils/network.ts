@@ -21,13 +21,23 @@ interface Person {
     img: string;
 }
 
+interface IResponse {
+    results: Person[],
+    next: string | null,
+    previous: string | null,
+}
+
 const instanceSWAPI = axios.create({
     baseURL: 'https://swapi.dev/api/'
 })
-const getApiPersonList = async (url: string): Promise<Person[] | boolean> => {
+const getApiPersonList = async (url: string, page: string | null): Promise<IResponse| boolean> => {
     try {
-        const response = await instanceSWAPI.get(url)
-        return response.data.results;
+        if(page){
+            const response = await instanceSWAPI.get(`${url}/?page=${page}`)
+            return response.data;
+        }
+        const response = await instanceSWAPI.get(`${url}/?page=${1}`)
+        return response.data;
     } catch (error) {
         return false;
     }

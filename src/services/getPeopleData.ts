@@ -1,7 +1,6 @@
 import {Person} from "../utils/network"
 
 const getPeopleID = (persons: Person[]): Person[] => {
-
     return persons.map((person) => {
         person.id = person.url.replace('https://swapi.dev/api/people/', '').replace('/', '');
         return person;

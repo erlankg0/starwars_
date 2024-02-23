@@ -1,0 +1,22 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 25%;
+    width: 500px;
+    margin: 0 auto;
+
+    padding: 15px;
+    gap: 20px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: bolder;
+}
+
