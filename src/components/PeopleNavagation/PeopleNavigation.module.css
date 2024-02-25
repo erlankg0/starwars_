@@ -9,14 +9,3 @@
     gap: 20px;
 }
 
-.btn{
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: 1px solid var(--color-white);
-    text-align: center;
-    text-decoration: none;
-    color: var(--color-white);
-    font-family: var(--font-family);
-    font-weight: bolder;
-}
-

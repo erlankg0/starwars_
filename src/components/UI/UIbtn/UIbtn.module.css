@@ -1,0 +1,20 @@
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color-white);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-white);
+    font-family: var(--font-family);
+    font-weight: bolder;
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btnDisabled{
+    background-color: var(--color-dark-gray);
+    color: var(--color-violet);
+    cursor: not-allowed;
+}
